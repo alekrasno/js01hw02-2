@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>JS-1. ДЗ-2. Задача 4</title>
+	</head>	
+	<body>
+		<script>
+			var num =+ prompt('Введите целое число [0... 15]');
+			var numberRow = '';
+			var numberRowBuilder = function(x)	{
+				for (i = x; i <= 15; i++)	{
+					//console.log('i = ' + i);					
+					numberRow = numberRow + ' ' +i;
+				}
+				return numberRow;
+			}
+			
+			switch (num)	{
+				case num:
+					alert(numberRowBuilder(num));
+					console.log(numberRow);
+					break;				
+				default:
+					alert('Число не вписывается в диапазон');
+			}
+		</script>
+	</body>
+</html>		

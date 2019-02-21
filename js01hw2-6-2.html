@@ -1,0 +1,62 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>JS-1. ДЗ-2. Задача 6</title>
+	</head>	
+	<body>
+		<script>
+			var a;
+			var b;
+			var c; 
+
+			var Sum = function(x, y)	{ // Функция сложения
+				return(x + y);
+			}
+
+			var Sub = function(x, y)	{ // Функция вычитания
+				return(x - y);
+			}
+
+			var Mul = function(x, y)	{ // Функция умножения
+				return(x * y);
+			}
+
+			var Div = function(x, y)	{ // Функция деления
+				return(x / y);
+			}
+
+			var mathOperation = function(x, y, z)	{  // Функция с тремя операторами
+				switch(y) {
+					case '+': // Сложение
+						return(Sum(x, z));
+						break;
+					case '-': // Вычитание
+						return(Sub(x, z));
+						break;	
+					case '*': // Умножение
+						return(Mul(x, z));
+						break;	
+					case '/': // Деление
+						return(Div(x, z));
+						break;	
+					default: {
+						alert('Арифметическое действие не определено');
+						
+					}	
+				}
+			}
+
+//===================================================
+
+			a =+ prompt('Первое число');
+			console.log(a);
+			b = prompt('Действие');
+			console.log(b);
+			c =+ prompt('Введите второе число');
+			console.log(c);
+			
+			alert(a +' '+ b +' '+ c + ' = ' + mathOperation(a, b, c));
+
+		</script>
+	</body>
+</html>		
